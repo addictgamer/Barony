@@ -51,6 +51,7 @@ export FMOD_DIR="${DEPENDENCIES_DIR}/fmodapi/"
 mkdir -p ../build/release
 cd ../build/release
 
+export OPTIMIZATION_LEVEL="-O2"
 cmake -DCMAKE_BUILD_TYPE=Release -DFMOD_ENABLED=ON -G "Unix Makefiles" ../..
 RESULT=$?
 if [ $RESULT -ne 0 ]; then
